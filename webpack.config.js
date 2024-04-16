@@ -5,8 +5,8 @@ module.exports = {
     entry:"./src/index.js",
     devtool: 'source-map',
     output:{
-        filename:"bundle-dev.js",
-        path:path.resolve(__dirname,'dev')
+        filename:"bundle-prod.js",
+        path:path.resolve(__dirname,'prod')
     },
     module: {
         rules: [
