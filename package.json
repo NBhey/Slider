@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "serve": "webpack-dev-server --mode development",
+    "build:prod": "webpack",
     "stylelint":"stylelint \"src/**/*.css\"",
     "stylelint:fix": "stylelint \"src/**/*.css\""
   },
