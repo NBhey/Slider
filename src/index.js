@@ -6,7 +6,8 @@ let currentIndex = 0;
 const carouselItems = document.querySelectorAll('.slider li');
 console.log(carouselItems)
 console.log(carouselItems.length)
-function goToSlide(index) {
+
+export default function goToSlide(index) {
   if (index < 0) {
     console.log(index)
     index = carouselItems.length - 1;
