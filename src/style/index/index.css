@@ -4,58 +4,59 @@
   margin: 0px;
   border: none;
 }
+
+
 .slider-wrap {
   position: relative;
-  overflow: hidden;
-  max-width: 1440px;
+  background-color: aquamarine;
+  max-width: 500px;
+  height: 500px;
   margin: 0 auto;
+  padding: 50px 0;
 }
-.slider-arrow {
-  width: 1440px;
+
+.slider {
   height: 100%;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  background-color: black;
-  opacity: 0.5;
-  color: #18d6a7;
-  font-size: 80px;
-  z-index: 1;
+  list-style-type: none;
 }
-.slider-arrow__left {
-  position: absolute;
-  font-size: 80px;
-  top: 50%;
-  cursor: pointer;
-  z-index: 1;
-  background-color: greenyellow;
-  opacity: 0.5;
-}
-.slider-arrow__right {
-  position: absolute;
-  font-size: 80px;
-  top: 50%;
-  cursor: pointer;
-  z-index: 1;
-  background-color: greenyellow;
-  opacity: 0.5;
-  right: 0;
-}
-.slider {
-  position: relative;
-  display: flex;
-  transition: transform 0.5s;
-}
-.slider > li {
+
+.slider-item {
+  display: none;
+  height: 100%;
   width: 100%;
-  flex: 1;
-  text-align: center;
 }
-.slider > li > img {
+
+.item-img {
+  width:500px;
+  height: 100%;
   object-fit: cover;
-  max-width: 1440px;
-  max-height: 800px;
+  
 }
+
+.slider-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+  width: 100%;
+  top: 50px;
+  z-index: 5;
+}
+
+.arrow {
+  background-color: rgba(233 205 205 15%);
+  cursor: pointer;
+  height: 100%;
+  width: 15%;
+  font-size: 20px;
+}
+
+.arrow:hover {
+  background-color: rgba(0 0 0 50%);
+}
+
+
 .navigation {
   background-color: black;
   display: flex;
@@ -65,33 +66,38 @@
   padding: 30px 0;
   max-width: 1440px;
 }
+
 .navigation__item {
   color: aqua;
   font-size: 20px;
   text-decoration: none;
 }
+
 .main {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 10px 5px 10px;
-  background-image: url(/src/img/main.jpg);
+  padding: 10px 5px;
+  background-image: url('/src/img/main.jpg');
   background-size: cover;
   height: auto;
 }
+
 .main__title {
   text-align: center;
   margin-bottom: 10px;
   color: #18d6a7;
 }
+
 .main__content {
   padding: 0px 0px 5px 5px;
   color: white;
   font-size: 15px;
 }
+
 .index-footer {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 10px 5px 10px;
+  padding: 10px 5px;
   display: grid;
   grid-template-columns: 1fr 0.5fr 1fr;
   gap: 5px;

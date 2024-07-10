@@ -1,12 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     entry:"./src/index.js",
-    devtool: 'source-map',
     output:{
         filename:"bundle-prod.js",
-        path:path.resolve(__dirname,'prod')
+        path:path.resolve(__dirname,'dist'),
+        assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
     },
     module: {
         rules: [
@@ -26,7 +26,7 @@ module.exports = {
       },
     devServer:{
         hot: true,
-        port:8080
+        port:8080,
 
     },
     plugins: [
@@ -46,6 +46,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template:path.join(__dirname, 'recording_page.html'),
             filename:"recording_page.html"
-        })
+        }),
+        new CopyPlugin({
+          patterns: [
+            { from: "src/img", to: "img" },
+            
+          ],
+        }),
     ]
 }
