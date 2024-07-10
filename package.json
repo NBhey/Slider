@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development --live-reload",
     "build:prod": "webpack --mode production",
     "stylelint":"stylelint \"src/**/*.css\"",
     "stylelint:fix": "stylelint \"src/**/*.css\""
